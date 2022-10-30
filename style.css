@@ -1,0 +1,107 @@
+main{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 51em;
+}
+
+.type_form{ 
+    width: 30%;
+}
+
+.typewriter{
+    display: inline-block;
+}
+
+.typewriter h1{
+    font-family: monospace;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    border-right: 0.15em solid black;
+    animation: blink 0.3s step-end infinite alternate, typing 3s steps(12)
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    } 
+}
+@keyframes typing {
+    from {
+        width: 0%
+    }
+}
+
+.successfull{
+    display: none;
+    width: 30%;
+   text-align: center;
+}
+.successfull h1{
+    font-family: monospace;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 2px;
+}
+.successfull h5{
+    font-family: monospace;
+    font-size: 1rem;
+    font-weight: 100;
+    letter-spacing: 1px;
+}
+
+#invalid-feedback1,
+#invalid-feedback2,
+#invalid-feedback3,
+#invalid-feedback4
+{
+  display: none;
+  color: red;
+}
+
+.buttonsub{
+    margin-top: 20px;
+}
+.submitButton{
+    background-color: black;
+    animation: pulse 2s ease-in-out .5s infinite;
+    border: none;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: black;
+        transform: scale(0.9);
+    }
+    50% {
+        background-color: black;
+        transform: scale(1);
+    }
+    100% {
+        background-color: black;
+        transform: scale(0.9);
+    }
+}
+
+
+
+@media screen and (max-width: 767px) {
+    .type_form{
+        width: 70%
+    }
+    .successfull{
+        width: 70%;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+    .type_form{
+        width: 50%
+    }
+    .successfull{
+        width: 50%;
+    }
+}
